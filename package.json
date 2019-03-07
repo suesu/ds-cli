@@ -1,5 +1,5 @@
 {
-  "name": "ds-cli",
+  "name": "dsweb-cli",
   "version": "1.0.0",
   "description": "ds cli project",
   "main": "bin/cli.js",
