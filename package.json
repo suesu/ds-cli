@@ -1,10 +1,11 @@
 {
   "name": "ds-cli",
   "version": "1.0.0",
-  "description": "DS前端应用的种子工程",
-  "main": "index.js",
+  "description": "ds cli project",
+  "main": "bin/cli.js",
+  "repository": "git@github.com:suesu/ds-cli.git",
   "bin": {
-    "ds-cli": "cli.js"
+    "ds": "./bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +14,7 @@
     "Cli",
     "Vue"
   ],
-  "author": "Sue",
+  "author": "Sue <suyang@asiainfo.com>",
   "license": "MIT",
   "dependencies": {
     "vue": "^2.6.8",
