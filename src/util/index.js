@@ -44,9 +44,10 @@ const util = {
   getConfig: R.memoize(_ => {
     let config = {}
     // 如果是项目集，项目集也会有个config.js
-    // if
     if (fs.existsSync('../config.js')) {
       config = R.merge(config, generateConfig('../config'))
     }
+    config = R.merge(config, generateConfig('config.js'))
+    return config
   })
 }

@@ -1,11 +1,11 @@
 {
   "name": "dsweb-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "ds cli project",
   "main": "bin/cli.js",
   "repository": "git@github.com:suesu/ds-cli.git",
   "bin": {
-    "ds": "./bin/cli.js"
+    "devs": "./bin/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,13 @@
   "author": "Sue <suyang@asiainfo.com>",
   "license": "MIT",
   "dependencies": {
+    "commander": "^2.19.0",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.2",
+    "nodemailer": "^5.1.1",
+    "ora": "^3.2.0",
+    "ramda": "^0.25.0",
+    "shelljs": "^0.8.3",
     "vue": "^2.6.8",
     "vuex": "^3.1.0",
     "webpack": "^4.29.6",

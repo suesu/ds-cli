@@ -1,20 +1,30 @@
-#! usr/bin/env node
+#!/usr/bin/env node
+const path = require('path');
+const fs = require('fs');
+const program = require('commander');
+const initial = require('../packages/commands/initial');
+// const start = require('../packages/commands/start');
+// const build = require('../packages/commands/build');
+// const upload = require('../packages/commands/upload');
+// const generate = require('../packages/commands/generate');
+// const analyse = require('../packages/commands/analysis');
+// const git = require('../packages/commands/git');
 
-const clone = require('git-clone'),
-  cmdInit = require('../lib/command/init')
-// const program = require('commander')
-// const shell = require('shelljs')
-// const log = require('tracer').colorConsole()
+var config = {};
 
-const version = require('../package').version
-program.version(version, '-v, --version')
+// 配置文件如果存在则读取
+if(fs.existsSync(path.resolve('mg.config.js'))){
+    config = require(path.resolve('mg.config.js'));
+}
 
+// 创建工程
 program
-  .command('init')
-  .alias('i')
-  .action(cmd => {
-    cmdInit()
-  })
+    .version('1.0.0','-v, --version')
+    .usage('[command]')
+    .command('init')
+    .description('initialize your project')
+    .action(initial);
+
 
 // program.command('* <tpl> <project>').action(function(tpl, project) {
 //   log.info('目前 DS-Web 支持以下模板：')
